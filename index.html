@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head id="Head1">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"></script>
+    <link href="themes/css/comun.css" type="text/css" rel="stylesheet" />
+    <link href="themes/css/menu.css" type="text/css" rel="stylesheet" />
+    <link href="themes/css/login.css" type="text/css" rel="stylesheet" />
+    <link href="themes/css/master.css" type="text/css" rel="stylesheet" />
+    <link href="themes/css/pie.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        Demo ReChapta | Croke
+    </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form method="post" action="index.html" id="form1" class="contenedor">
+
+        <script type="text/javascript">
+            function Focus() {
+                obj = document.getElementById("LoginView1_ucIniciarSesion_Login1_Password");
+                obj.value = "";
+                obj.className = "txtLoginHome";
+            }
+
+            function Blur() {
+                obj = document.getElementById("LoginView1_ucIniciarSesion_Login1_Password");
+                if (obj.value == "*" || obj.value == "" || obj.value == null) {
+                    obj.className = "txtLoginHomePass";
+                } else {
+                    obj.className = "txtLoginHome";
+                }
+            }
+
+            function onLogin() {
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
+                        action: 'submit'
+                    }).then(function (token) {
+                        console.log("TOKEN");
+                        console.log(token);
+                        console.log("VERIFICANDO TOKEN");
+                        $.post('https://www.google.com/recaptcha/api/siteverify', {
+                                secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
+                                response: token
+                            },
+                            function (returnedData) {
+                                console.log(returnedData);
+                            }).fail(function () {
+                            console.log("error");
+                        });
+                        //Hay que hacer un post con el token y la clave privada a URL: https://www.google.com/recaptcha/api/siteverify METHOD: POST
+                        // https://developers.google.com/recaptcha/docs/verify
+                        // Esto devuelve los datos que hay sobre la petición
+                    });
+                });
+            }
+        </script>
+        <section class="fondoBlanco" style="height:4.6rem;">
+            <nav class="menu--nav">
+                <img id="imgLogo" src="images/demo_logo.PNG" alt="SDA" class="logo" />
+                <div class="encGrande">
+                    <div class="iconoEncabezado"><span class="numtlfMailBlack">@croke.es</span></div>
+                    <div class="iconoEncabezado"><img class="tlfMail" src="images/Email_BLK.png" /></div>
+                    <div class="iconoEncabezado"><img class="separador" src="images/pestana_separador.png" /></div>
+                    <div class="iconoEncabezado"><span class="numtlfMailBlack">Teléfono</span></div>
+                    <div class="iconoEncabezado"><img class="tlfMail" src="images/Telefono_BLK.png" /></div>
+                </div>
+                <div class="encPequeño">
+                    <div class="iconoEncabezado">
+                        <span class="numtlfMail">
+                            Teléfono&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a id="mailto2">@croke.es</a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section class="seccionHOME verdoso">
+            <div class="homeSIO1">
+                <div class="loginSIO_seccion1" style="margin-left:15%;">
+                    <div class="tit1" style="font-family:'Segoe UI'">
+                        <span>Demo de</span><br />
+                        <span>ReChaptaV3</span>
+                    </div>
+                    <p class="tit23" style="font-family:Segoe UI semibold">Comprobación del funcionamiento y despliegue
+                        <br />
+                        de Google ReChaptaV3 en una web estática.</p>
+                </div>
+                <div class="loginSIO_seccion2">
+                    <div id="divLogIn" class="contenedorLoginSIO">
+                        <div class="tit1login" style="padding-left:10px">Formulario de prueba</div>
+                        <table class="login1" cellspacing="0" cellpadding="1" id="LoginView1_Login1">
+                            <tr>
+                                <td>
+                                    <table cellpadding="0">
+                                        <tr>
+                                            <td align="right"></td>
+                                            <td><input name="LoginView1$Login1$UserName" type="text"
+                                                    id="LoginView1_Login1_UserName" class="btnSIOloginUserPwd"
+                                                    placeholder="Usuario" />&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"></td>
+                                            <td><input name="LoginView1$Login1$Password" type="password"
+                                                    id="LoginView1_Login1_Password" class="btnSIOloginUserPwd"
+                                                    placeholder="Contraseña" />&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" colspan="2">
+                                                <input type="submit" value="ENTRAR" class="g-recaptcha-response"
+                                                    data-sitekey="6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"
+                                                    data-callback='onSubmit' data-action='submit'
+                                                    id="LoginView1_Login1_LoginButton" class="btnSIOlogin azulSIO"
+                                                    onclick="onLogin()" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><a id="LoginView1_Login1_PasswordRecoveryLink">No ha olvidad
+                                                    su contraseña.</a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <section class="seccionHOME fondoAzul" style="height:60px;position:fixed;bottom:0">
+            <footer class="pieHome">
+
+                <div class="contenedorPieCopy">
+                    <table>
+                        <tr>
+                            <td class="pieCopy" style="color:white;">&copy;</td>
+                            <td class="pieCopy" style="color:white;">Croke</td>
+                        </tr>
+                        <tr>
+                            <td class="pieCopy" style="color:white"></td>
+                            <td class="pieCopy" style="color:white;">Demo</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="logoPie"><a><img src="images/demo_logo_white.PNG" /></a></div>
+
+                <ul>
+
+                </ul>
+            </footer>
+        </section>
+    </form>
+</body>
+
+</html>

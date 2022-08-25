@@ -1,0 +1,1234 @@
+﻿/* Reset */
+html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 1.000em;
+    color: #23395B;
+    height: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Estilos */
+.contenedor {
+    position: relative; /* Para que se mantenga dentro de la capa padre */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.cuerpoSeccionSupIzq {
+	min-height: 400px;
+    width: 100%;
+    margin: 0 0 2% 0;
+    padding: 2%;
+    background-color: white;
+    float: left;
+}
+
+.cuerpoSeccionSupIzqTabs {
+    width: 100%;
+    margin: 0 0 2% 0;
+    background-color: transparent;
+    float: left;
+}
+
+.DivSupIzq {
+    width: 100%;
+    margin: 0 1% 1% 0;
+    padding: 1%;
+    background-color: white;
+    float: left;
+}
+
+.DivSupIzq1 {
+    width: 50%;
+    margin: 0 1% 0% 0;
+    padding-left: 2%;
+    background-color: white;
+    float: left;
+}
+
+.tituloAdicional {
+    color: #23395B;
+    background-color: #13294B;
+    font-family: Segoe UI;
+    vertical-align: Middle;
+    white-space: normal;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.titulo1 {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #412854;
+    text-decoration: none;
+}
+
+.titulo2 {
+    color: #412854;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2% 2% 0 2%;
+	text-decoration: none;
+}
+
+.btnGenerico {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #23395B;
+    color: white;
+    letter-spacing: normal;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Segoe UI;
+    border: none;
+    text-decoration: none;
+    height: 25px;
+}
+
+    .btnGenerico:link {
+        font-family: Segoe UI, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        background-color: #006699;
+        box-shadow: 2px 2px 3px #81abd6;
+        border-radius: 7px;
+        border-color: transparent;
+        color: #FFFFFF;
+        letter-spacing: normal;
+        vertical-align: top;
+    }
+
+    .btnGenerico:disabled {
+        font-family: Segoe UI, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: center;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        background-color: #EEEEEF;
+        box-shadow: 2px 2px 3px #c3c3c3;
+        border-radius: 7px;
+        border-color: transparent;
+        color: #A6A6A6;
+        letter-spacing: normal;
+        vertical-align: top;
+        cursor: auto;
+    }
+
+.controlBusqueda {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #003366;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.label1Azul {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #23395B;
+}
+
+.label1Verde {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    color: #008000;
+}
+
+.label1Rojo {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    color: #CC0000;
+}
+
+.label2Rojo {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    color: #CC0000;
+}
+
+.errNivel {
+    font-family: Segoe UI;
+    font-size: 0.814em;
+    color: #FF0000;
+}
+
+.FileUpload {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 500px;
+}
+
+.TextBoxForm {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 0.88em;
+    color: #464647;
+    border: solid 1px gray;
+    height: 100%;
+}
+
+.parrafo {
+    color: #404040;
+    font-size: 13px;
+    padding: 1% 2% 1% 2%;
+    text-align: justify;
+}
+
+.linkConParrafo {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #00b0f0;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.centrar {
+    text-align: center;
+    padding: 1.5%;
+}
+
+.epigrafe0 {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #412854;
+    text-align: left;
+    text-decoration: none;
+    line-height: 14pt;
+    background-color: transparent;
+}
+
+.activoIdioma {
+    text-decoration: underline;
+}
+
+.desactivoIdioma {
+    text-decoration: none;
+}
+
+.alinearDerecha {
+    text-align: right;
+}
+
+.alinearIzquierda {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.alinearCentro {
+    text-align: center;
+}
+
+.alineaMedio {
+    vertical-align: middle;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.gris {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #D5BFD5;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.verticalAlignMiddle {
+    vertical-align: middle;
+}
+
+.paddinBottom5 {
+    padding-bottom: 5px;
+}
+
+.paddinTop2 {
+    padding-top: 2px;
+}
+
+.paddinTop5 {
+    padding-top: 5px;
+}
+
+.paddinTop6 {
+    padding-top: 6px;
+}
+
+.paddinTop10 {
+    padding-top: 10px;
+}
+
+.paddinTop15 {
+    padding-top: 15px;
+}
+
+.paddinTop20 {
+    padding-top: 20px;
+}
+
+.paddinTop25 {
+    padding-top: 25px;
+}
+
+.paddinTop30 {
+    padding-top: 30px;
+}
+
+.paddinTop35 {
+    padding-top: 35px;
+}
+
+.paddinTopDown4 {
+    padding: 4px 0px 4px 0px;
+}
+
+.paddinTopDown20 {
+    padding: 20px 0px 20px 0px;
+}
+
+.paddinLeft2 {
+    padding-left: 2px;
+}
+
+.paddinLeft5 {
+    padding-left: 5px;
+}
+
+.paddinLeft6 {
+    padding-left: 6px;
+}
+
+.paddinLeft10 {
+    padding-left: 10px;
+}
+
+.paddinLeft15 {
+    padding-left: 15px;
+}
+
+.paddinLeft20 {
+    padding-left: 20px;
+}
+
+.paddinLeft25 {
+    padding-left: 25px;
+}
+
+.paddinLeft40 {
+    padding-left: 40px;
+}
+
+.paddinLeft68 {
+    padding-left: 68px;
+}
+
+.paddinLetf100 {
+    padding-left: 100px;
+}
+
+.paddinLeft200 {
+    padding-left: 200px;
+}
+
+.paddinLeft250 {
+    padding-left: 250px;
+}
+
+.paddinLeft300 {
+    padding-left: 300px;
+}
+
+.paddinLeft500 {
+    padding-left: 500px;
+}
+
+.paddinLeft5Porcentaje {
+    padding-left: 5%;
+}
+
+.paddinLeft10Porcentaje {
+    padding-left: 10%;
+}
+
+.paddinLeft20Porcentaje {
+    padding-left: 20%;
+}
+
+.paddinRight5 {
+    padding-right: 5px;
+}
+
+.paddinRight10 {
+    padding-right: 10px;
+}
+
+.margenTop-10 {
+    margin-top: -10px;
+}
+
+.margenTop5 {
+    margin-top: 5px;
+}
+
+.margenTop10 {
+    margin-top: 10px;
+}
+
+.margenTop15 {
+    margin-top: 15px;
+}
+
+.margenTop20 {
+    margin-top: 20px;
+}
+
+.margenTop30 {
+    margin-top: 30px;
+}
+
+.margenBottom5 {
+    margin-bottom: 5px;
+}
+
+.margenBottom15 {
+    margin-bottom: 15px;
+}
+
+.margenLeft45 {
+    margin-left: 45px;
+}
+
+.margenRight45 {
+    margin-right: 45px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.textoMayusculas {
+    text-transform: uppercase;
+}
+
+.centrarGridView {
+    margin: 0 auto;
+}
+
+.dxgvEditFormCaption_Aqua {
+    white-space: inherit;
+}
+
+.mostrasMasGridview div {
+    clear: both;
+}
+
+.mostrasMasGridview p {
+    color: #4E77A0;
+}
+
+.mostrasMasGridview span {
+    float: left;
+    width: 50%;
+}
+
+.mostrarMasGridview4Columnas div {
+    clear: both;
+}
+
+.mostrarMasGridview4Columnas p {
+    color: #4E77A0;
+}
+
+.mostrarMasGridview4Columnas span {
+    float: left;
+    width: 25%;
+}
+
+.widthFormulario {
+    width: 20%;
+}
+
+.lblPopup1 {
+    position: absolute;
+    z-index: 100;
+    float: right;
+    margin-top: -10px;
+    padding: 0.2%;
+    background-color: #DBDBDB;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    color: #000000;
+    font-family: Segoe UI;
+}
+
+.lblPopup2 {
+    position: absolute;
+    z-index: 100;
+    float: right;
+    margin-top: -10px;
+    padding: 0.2%;
+    background-color: #DBDBDB;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    color: #000000;
+    font-family: Segoe UI;
+    width: 20%;
+}
+
+.texto_vertical {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.div_titulo2 {
+    width: 100%;
+    float: left;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 5px;
+    background-color: #93CDDD;
+    font-family: Segoe UI;
+    color: white;
+}
+
+.div_titulo3 {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: bold;
+    color: #23395b;
+}
+
+.div_titulo4 {
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    font-family: Segoe UI;
+    font-size: 12px;
+    font-weight: bold;
+    color: #23395b;
+}
+
+.label_gris_1 {
+    line-height: 20px;
+    font-family: Segoe UI;
+    font-size: 14px;
+    color: #23395b;
+}
+
+.calendar {
+    width: 100px;
+    height: 20px;
+}
+
+.checkbox_azul {
+    line-height: 20px;
+    font: 12px Segoe UI, Tahoma, Geneva, sans-serif;
+    color: #23395b;
+}
+
+    .checkbox_azul input[type="checkbox"] {
+        display: none;
+    }
+
+        .checkbox_azul input[type="checkbox"] + label {
+            line-height: 20px;
+            padding: 3px 10px;
+            background: #13294B;
+            background-image: -webkit-linear-gradient(top, #13294B, #13294B);
+            background-image: -moz-linear-gradient(top, #13294B, #D9D9D9);
+            background-image: -ms-linear-gradient(top, #13294B, #13294B);
+            background-image: -o-linear-gradient(top, #13294B, #13294B);
+            background-image: linear-gradient(to bottom, #13294B, #13294B);
+            cursor: pointer;
+        }
+
+            .checkbox_azul input[type="checkbox"] + label:hover {
+                background: #13294B;
+                background-image: -webkit-linear-gradient(top, #13294B, #13294B);
+                background-image: -moz-linear-gradient(top, #13294B, #13294B);
+                background-image: -ms-linear-gradient(top, #13294B, #13294B);
+                background-image: -o-linear-gradient(top, #13294B, #13294B);
+                background-image: linear-gradient(to bottom, #13294B, #13294B);
+            }
+
+        .checkbox_azul input[type="checkbox"]:checked + label {
+            background: #00B0F0;
+        }
+
+.checkb_switch_azul {
+    line-height: 20px;
+    font: 12px Segoe UI, Tahoma, Geneva, sans-serif;
+    color: black;
+}
+
+    .checkb_switch_azul input[type="checkbox"] {
+        visibility: hidden;
+    }
+
+        .checkb_switch_azul input[type="checkbox"] + label {
+            position: relative;
+            float: left;
+            line-height: 20px;
+            padding-left: 40px;
+            margin: 3px 0;
+            cursor: pointer;
+        }
+
+            .checkb_switch_azul input[type="checkbox"] + label::before,
+            .checkb_switch_azul input[type="checkbox"] + label::after {
+                position: absolute;
+                left: 0;
+                content: '';
+                line-height: 1em;
+                -webkit-transition: all 0.1s cubic-bezier(0.72, 0.21, 0.95, 0.64);
+                transition: all 0.1s cubic-bezier(0.72, 0.21, 0.95, 0.64);
+            }
+
+            .checkb_switch_azul input[type="checkbox"] + label::before {
+                width: 35px;
+                top: 0;
+                bottom: 0;
+                background-color: #DCE5ED;
+                border-radius: 10px;
+                box-shadow: inset 0.13em 0.13em 0.2em rgba(0, 0, 0, 0.3);
+            }
+
+            .checkb_switch_azul input[type="checkbox"] + label::after {
+                width: 1.4em;
+                top: 0.1em;
+                bottom: 0.1em;
+                border-radius: 50%;
+                background-color: #00B0F0;
+            }
+
+        .checkb_switch_azul input[type="checkbox"]:checked + label::before {
+            background: #C0E1A9;
+        }
+
+        .checkb_switch_azul input[type="checkbox"]:checked + label::after {
+            margin-left: 1.5em;
+            background-color: #DCE5ED;
+        }
+
+.rbutton_azul {
+    line-height: 20px;
+    font: 12px Segoe UI, Tahoma, Geneva, sans-serif;
+    color: #FFFFFF;
+}
+
+    .rbutton_azul input[type="radio"] {
+        display: none;
+    }
+
+        .rbutton_azul input[type="radio"] + label {
+            line-height: 20px;
+            padding: 3px 10px;
+            background: #D9D9D9;
+            background-image: -webkit-linear-gradient(top, #D9D9D9, #D9D9D9);
+            background-image: -moz-linear-gradient(top, #D9D9D9, #D9D9D9);
+            background-image: -ms-linear-gradient(top, #D9D9D9, #D9D9D9);
+            background-image: -o-linear-gradient(top, #D9D9D9, #D9D9D9);
+            background-image: linear-gradient(to bottom, #D9D9D9, #D9D9D9);
+            cursor: pointer;
+        }
+
+            .rbutton_azul input[type="radio"] + label:hover {
+                background: #DCE5ED;
+                background-image: -webkit-linear-gradient(top, #DCE5ED, #DCE5ED);
+                background-image: -moz-linear-gradient(top, #DCE5ED, #DCE5ED);
+                background-image: -ms-linear-gradient(top, #DCE5ED, #DCE5ED);
+                background-image: -o-linear-gradient(top, #DCE5ED, #DCE5ED);
+                background-image: linear-gradient(to bottom, #DCE5ED, #DCE5ED);
+            }
+
+        .rbutton_azul input[type="radio"]:checked + label {
+            background: #00B0F0;
+        }
+
+.scroll_overflow_h {
+    overflow-x: auto !important;
+}
+
+.calendar .dx {
+    background-color: white;
+}
+
+.calendar .dxeEditArea {
+    text-align: center;
+}
+
+.calendar .dxic {
+    height: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #A6A6A6;
+}
+
+.toolbar_base {
+    float: left;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    padding: 0;
+    width: 110px;
+    height: 36px;
+    border-radius: 19px;
+    background-color: #c2d5eb;
+    box-shadow: 2px 2px 3px #81abd6;
+}
+
+.toolbar_imgbutton {
+    float: left;
+    margin-top: 2px;
+    margin-left: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #c2d5eb;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    -webkit-transition: -webkit-background-color 0.3s, -webkit-background-image 0.3s;
+    -moz-transition: -moz-background-color 0.3s, -moz-background-image 0.3s;
+    transition: background-color 0.3s, background-image 0.3s;
+}
+
+    .toolbar_imgbutton:hover {
+        background-color: #0074D1;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+.toolbar_ddl {
+    margin: 0;
+    padding: 0;
+    float: right;
+    line-height: 36px;
+    padding-right: 13px;
+}
+
+.divPopUp {
+    display: table-cell;
+    width: 300px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: center;
+}
+
+.panelPopUp {
+    display: table;
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.panelPopUp2 {
+    display: table;
+    width: 500px;
+    height: 30px;
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.panelPopUp3 {
+    display: table;
+    width: 900px;
+    height: auto;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    overflow-y: auto;
+}
+
+
+.lblPopup {
+    position: absolute;
+    z-index: 100;
+    float: right;
+    margin-top: -10px;
+    margin-right: -230px;
+    padding: 7px 7px 7px 7px;
+    background-color: #DBDBDB;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+    color: #000000;
+    font-family: Segoe UI;
+}
+
+.margenPopupAso {
+    margin-left: 315px;
+}
+
+.margenPopupRepre {
+    margin-left: 345px;
+}
+
+/* Imagen de carga */
+#progressBackgroundFilter {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    filter: alpha(opacity=70);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+#processMessage {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    padding: 10px;
+    width: 20%;
+    height: 20%;
+    z-index: 0;
+    background-color: transparent;
+}
+
+/**** Animación de cargar página ****/
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.div_loading {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Segoe UI;
+    font-size: 20px;
+    font-weight: bold;
+    color: #328181;
+}
+
+.loading-container {
+    display: block !important;
+    float: none !important;
+    width: 80px;
+    margin: auto;
+}
+
+.loading-1, .loading-2, .loading-3 {
+    width: 20px;
+    height: 20px;
+    background: #328181;
+    animation: pulse .99s linear infinite;
+    float: left;
+    border-radius: 10px;
+}
+
+.loading-2 {
+    animation-delay: 0.33s;
+    margin: 0 10px;
+}
+
+.loading-3 {
+    animation-delay: 0.66s;
+}
+/**** Fin Animación carga ****/
+
+.dx_centrar {
+    margin: 0 auto !important;
+}
+
+.gridHidedHeader {
+    display: none;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.nota {
+    clear: both;
+    font-size: 12px;
+    font-style: italic;
+    color: #23395B;
+}
+
+.notaNoClear {
+    font-size: 12px;
+    font-style: italic;
+    color: #23395B;
+}
+
+.lblNivel1 {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #00415F;
+    text-align: center;
+}
+
+.etiForm1 {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 0.85em;
+    color: #004964;
+}
+
+.grid_1 {
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 6px;
+    margin-right: 5px;
+}
+
+.grid_3 {
+    display: inline;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.alpha {
+    margin-left: 0;
+}
+
+.modalBackground {
+    background-color: #412854;
+    filter: alpha(opacity=80);
+    opacity: 0.7;
+}
+
+.w80 {
+    width: 80%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.w20 {
+    padding-top: 70px;
+    width: 20%;
+    float: left;
+}
+
+.pad30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.tituloAzul {
+    padding: 5px;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: bold;
+    color: #23395B;
+}
+
+.divFlotante {
+    width: 16%;
+    position: fixed;
+    font-family: Segoe UI;
+    font-size:12px;
+    color: white;  
+    font-weight:bold; 
+}
+
+.divFlotante a {
+    height: 50px;
+    text-align: center;
+}
+
+.divFlotante a span {
+    vertical-align: top;
+}
+
+.divFlotante a img {
+    margin: 5px;
+}
+
+    .divFlotante .divTxt {
+        width: 50%;
+        float: left;
+        height: 20px;
+        text-align: left;
+        padding: 5px 0 0 10px;
+    }
+
+    .divFlotante .divIcono {
+        width: 50%;
+        float: left;
+        height: 20px;
+        text-align: right;
+        padding: 0 10px 0 0;
+    }
+
+.visible_R {
+    display: none;
+}
+
+@media all and (min-width:780px) {
+
+    .cuerpoSeccionSupIzq {
+        width: 100%;
+        margin: 0 0 2% 0;
+        padding: 2%;
+        background-color: white;
+        float: left;
+    }
+
+    .cuerpoSeccionSupIzqTabs {
+        width: 100%;
+        margin: 0 0 2% 0;
+        background-color: transparent;
+        float: left;
+    }
+}
+
+@media all and (min-width:350px) and (max-width:499px) {
+
+    .grid_1 { /* Para que en dispositivos moviles esté más compacto*/
+        margin: 0;
+    }
+}
+
+/*FORMULARIOS*/
+
+.btnPlegable {
+    width:100%;
+    border:none;
+    padding: 7px 7px 7px 27px;
+    font-family: Segoe UI;
+    font-weight: normal;
+    font-size: 12px;
+    color: White;
+    text-align: Left;
+    cursor: pointer;
+    background: url(../../Imagenes/menos.png) left 7px top 7px no-repeat #AAAAAA;
+}
+
+.formulario h2 {
+    font-family: Segoe UI;
+    font-size: 18px;
+    color: #23395B;
+    font-weight: bold;
+    text-align: left;
+}
+
+.formulario div {
+    float:left;
+}
+
+.formulario div:not([id$="DDD_PW-1"]) {
+    width: 50%;
+}
+
+.formulario div div:not([id$="DDD_PW-1"]){
+    width:70%;
+}
+
+.formulario div div:nth-child(1) {
+    width: 150px;
+}
+
+.formulario div div:nth-child(1):not(.dxpc-mainDiv, .dxpc-contentWrapper, .dxpc-content) {
+    margin-bottom: 10px;
+}
+
+.formulario div div:nth-child(2) {
+   margin-bottom:10px;
+}
+
+.formulario h3 {
+    font-size: 13px;
+    color: #23395B;
+    padding: 4px 4px 4px 0px;
+    white-space: nowrap;
+}
+
+.formulario span {
+    font-size: 11px;
+    color: #23395B;
+    padding: 4px 4px 4px 0px;
+    white-space: nowrap;
+}
+
+.formulario label {
+    font-size: 11px;
+    color: #23395B;
+    white-space: nowrap;
+}
+
+.formulario input[type="text"]:disabled {
+    color: #23395B;
+    background-color: white;
+}
+
+.formulario input[type="text"]:not([id$="I"]) {
+    width:300px;
+    font-size: 11px;
+    color: #23395B;
+    height: 20px;
+    padding: 0px 1px 0px 0px;
+    border: 1px solid #13294B !important;
+    border-spacing: 2px;
+    padding-left: 2px;
+}
+
+.formulario table.dxeButtonEditSys {
+    border: 1px solid #13294B;
+}
+
+.formulario .dxic input[type="text"]{
+    width:278px;
+    height:16px;
+    font-size: 11px;
+    color: #23395B;
+    text-align:center;
+    font-family: 'Segoe UI';
+}
+
+.formulario input[type="radio"] {
+    margin: 0px;
+}
+
+.formulario select {
+    width: 300px;
+    font-size: 11px;
+    color: #23395B;
+    height: 20px;
+    padding: 0px 1px 0px 0px;
+    border: 1px solid #13294B;
+    border-spacing: 2px;
+    font-family: 'Segoe UI';
+}
+
+.formulario input[type="radio"],input[type="checkbox"] {
+        display: none;
+    }
+
+    .formulario label:before {
+        content: "";
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        font-size: 10px;
+        width: 16px;
+        height: 16px;
+        font-weight: bold;
+        box-sizing: border-box;
+        border: 1px solid #13294B;
+        vertical-align: top;
+        color: #0074D1;
+        box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+        vertical-align: text-bottom;
+    }
+
+    .formulario input[type="radio"]:checked + label:before,input[type="checkbox"]:checked + label:before {
+        content: "\2713";
+    }
+
+    .formulario input[type="radio"]:disabled + label:before,input[type="checkbox"]:disabled + label:before {
+        background-color: #EEEEEF;
+    }
+
+.deshabilitar {
+    text-align:center;
+    color: #d0d0d0;
+}
+
+.fondoBlanco {
+    background-color: #ffffff;
+}
+
+    

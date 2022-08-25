@@ -1,0 +1,436 @@
+﻿/* Reset */
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#menu {
+    position: static; /* Para que se mantenga alineado con la capa superior (contenedor) no con el menu(menu--nav) */
+    display: table; /* Los elementos del menu se muestran como una tabla. En linea */
+    table-layout: fixed; /* Todos los elementos del menu ocupan el mismo espacio */
+    float: right; /* Para que el menú esté alineado a la derecha */
+    width: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /*margin-right:10%;*/
+    font-weight: bold;
+}
+
+    #menu ul {
+        list-style-type: none;
+    }
+
+        #menu ul li.nivel1 {
+            float: left;
+            /*width: 200px;*/
+            /*padding-left: 12px;*/
+            width: auto;
+            margin: 20px 0 0 30px;
+            /*margin-right: 2px;*/
+            text-align: left;
+            font-size: 14px;
+        }
+
+        #menu ul li.pendienteNo {
+            background-image: url(../../Imagenes/SDA/Ok.png);
+            background-repeat:no-repeat;
+            background-position: right;
+            padding-right:20px;
+            background-size:18px;
+        }
+
+        #menu ul li.pendienteSi {
+            background-image: url(../../Imagenes/SDA/warningConf.png);
+            background-repeat:no-repeat;
+            background-position: right;
+            padding-right:20px;
+            background-size:18px;
+        }
+
+        #menu ul li a {
+            display: block;
+            text-decoration: none;
+            color: #23395B;
+            background-color: transparent;
+            border: solid 1px #fff;
+            /*padding: 12px 0 12px 12px;*/
+            position: relative;
+            /*font-weight: bold;*/
+        }
+
+        #menu ul li:hover {
+            position: relative;
+        }
+
+            #menu ul li a:hover /*, #menu ul li:hover a.nivel1*/ {
+                background-color: transparent;
+                color: #23395B;
+                position: relative;
+            }
+
+        #menu ul li a.nivel1 {
+            display: block!important;
+            display: none;
+            position: relative;
+        }
+
+        #menu ul li ul {
+            width: 200px;
+            display: none;
+            z-index:1;
+        }
+
+        #menu ul li a:hover ul, #menu ul li:hover ul {
+            display: block;
+            position: absolute;
+            left: 0px;
+        }
+
+        #menu ul li ul li a {
+            /*width: 198px;*/
+            width: inherit;
+            padding: 10px 10px 10px 10px;
+            /*border-top-color: #000;*/
+            background-color: #23395B;
+            color: white;
+        }
+
+            #menu ul li ul li a:hover {
+                background-color: #23395B;
+                color: white;
+                text-decoration: underline;
+                position: relative;
+            }
+
+table.falsa {
+    border-collapse: collapse;
+    border: 0px;
+    float: left;
+    position: relative;
+}
+
+.invisible {
+    visibility: hidden;
+    display: none;
+}
+
+/* TOOGLE MENU (Hamburguesa) */
+
+/* Ocultamos el checkbox */
+.menu--checkbox__hack {
+    display: none;
+}
+
+/* El label se relaciona con el checkbox. El label lleva el icono de la hamburguesa en el before */
+.menu--checkbox-hack__label:before {
+    display: table;
+    width: 45px;
+    height: 45px;
+    margin-top: 25px;
+    cursor: pointer;
+    background-color: #412854;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    border-bottom: 1px solid #9EB2C7;
+}
+
+/* El checkbox está relacionado con un label que tiene un before con el icono de la hamburguesa.
+   Al pinchar en la hamburguesa se marca el check y se muestra el menu */
+.menu--checkbox__hack:checked ~ .menu--nav-top {
+    display: block;
+}
+
+.menu--checkbox__hack:checked ~ .menu--checkbox-hack__label:before {
+    width: 100%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#imgMenuRWD {
+    border: none;
+    width: 45px;
+    height: 45px;
+    margin-top: 30px;
+    float: left;
+}
+
+
+/* Estilo de los elementos del menu. CONTENEDOR del menú */
+.menu--nav {
+    border: solid 1px transparent;
+    position: relative; /* Las listas que se despliegan se van a ordenar en relación de esta capa */
+    width: 88%;
+    margin: 0 6% 0 6%;
+    font: 12px Segoe UI, arial, verdana;
+}
+
+    .menu--nav a {
+        text-decoration: none;
+    }
+
+    .menu--nav li.bloqueado {
+        text-decoration: none;
+    }
+
+    .menu--nav a.bloqueado {
+        color: #797979;
+    }
+
+/* Nivel 0. Primer <ul> del menú */
+.menu--nav-top {
+    display: none;
+    position: absolute; /* El menu en movil tiene que estar oculto y no desplazar las capas hermanas (seccion) */
+    z-index: 1;
+    width: 100%; /* La tabla ocupa toda la pantalla*/
+    text-align: left;
+}
+
+/* menu--nav > ul > li class="menu--nav-nivel1" */
+
+.menu--nav-nivelNoVisibleMenu {
+    display: none;
+}
+
+/* Nivel 1. Lista vertical para dispositivos móviles. Se aplica a un <li> */
+.menu--nav-nivel1 {
+    padding: 15px 30px 15px 30px;
+    background-color: #412854;
+    border-bottom: 1px solid #9EB2C7;
+}
+
+    .menu--nav-nivel1 > a {
+        color: white;
+        font-size: large;
+    }
+
+    .menu--nav-nivel1:hover > a {
+        text-decoration: underline;
+    }
+
+    .menu--nav-nivel1 > ul {
+        z-index: 1;
+        display: none;
+        border: 1px solid #9EB2C7;
+        border-bottom: none;
+    }
+
+    .menu--nav-nivel1:hover > ul {
+        display: block;
+    }
+
+
+/* Subnivel 1. Se aplica a un <li>  */
+
+
+    .menu--nav-subNivel1:last-child {
+        border-bottom: 1px solid #9EB2C7;
+    }
+
+    .menu--nav-subNivel1 > ul {
+        padding-top: 10px;
+        display: none;
+    }
+
+    .menu--nav-subNivel1:hover > ul {
+        display: block;
+    }
+
+    .menu--nav-subNivel1 > a {
+        font-size: 13px;
+        color: white;
+    }
+
+    .menu--nav-subNivel1:hover > a {
+        text-decoration: underline;
+    }
+	
+	.menu--nav-subNivel1.bloqueado {
+        display:none;
+    }
+
+.noMayus {
+    text-transform: none;
+}
+
+/* Subnivel 2. Se aplica a un <li>  */
+.menu--nav-subNivel2 {
+    padding: 1px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+    .menu--nav-subNivel2 > a {
+        color: white;
+        vertical-align: text-bottom;
+        font-size: 13px;
+    }
+
+        .menu--nav-subNivel2 > a::before {
+            content: "";
+        }
+
+    .menu--nav-subNivel2:hover > a {
+        text-decoration: underline;
+    }
+
+    .menu--nav-subNivel2 > ul {
+        padding-top: 10px;
+        display: none;
+    }
+
+/* Subnivel 3. Se aplica a un <li>  */
+.menu--nav-subNivel3 {
+    padding: 5px 5px 5px 30px;
+}
+
+    .menu--nav-subNivel3 > ul {
+        padding-top: 10px;
+        display: none;
+    }
+
+    .menu--nav-subNivel3:hover > ul {
+        display: block;
+    }
+
+    .menu--nav-subNivel3 > a {
+        color: white;
+    }
+
+        .menu--nav-subNivel3 > a::before {
+            content: "· ";
+        }
+
+    .menu--nav-subNivel3:hover > a {
+        text-decoration: underline;
+    }
+
+.menu--nav-subNivel4 {
+    display: none;
+}
+
+.pie {
+    width: 100%;
+	background-color: #412854;
+}
+
+.margenAgendaReuniones {
+    margin-top: 0px;
+}
+
+
+@media all and (min-width:780px) {
+
+    .menu--checkbox-hack__label {
+        display: none;
+    }
+
+    .menu--nav-top, .menu--checkbox__hack:checked ~ .menu--nav-top {
+        position: static; /* Para que se mantenga alineado con la capa superior (contenedor) no con el menu(menu--nav) */
+        display: table; /* Los elementos del menu se muestran como una tabla. En linea */
+        table-layout: fixed; /* Todos los elementos del menu ocupan el mismo espacio */
+        float: right; /* Para que el menú esté alineado a la derecha */
+        width: auto;
+        margin-top: 30px;
+    }
+
+    /* menu--nav-top > ul > li class="menu--nav-nivel1" */
+
+    .menu--nav-nivel1 {
+        padding-right: 0;
+        display: table-cell;
+        background-color: transparent;
+        border-bottom: none;
+    }
+
+        .menu--nav-nivel1[id="pos1"] > ul > li {
+            width: 33%;
+        }
+
+        .menu--nav-nivel1[id="pos2"] > ul > li {
+            width: 33%;
+        }
+
+        .menu--nav-nivel1[id="pos3"] > ul > li {
+            width: 25%;
+        }
+
+        .menu--nav-nivel1[id="pos4"] > ul > li {
+            width: 33%;
+        }
+
+        .menu--nav-nivel1 > a {
+            color: #412854;
+        }
+
+        .menu--nav-nivel1:hover > ul {
+            position: absolute;
+            table-layout: fixed;
+            width: 100%;
+            padding-left: 2%;
+            left: 0;
+            top: 79px; /* 70px (donde empieza la flecha) + 10px del borde (triángulo flecha) - 1px (línea de abajo de la flecha) */
+            border-bottom: 1px solid #BFC7CE;
+            background-color: #412854;
+        }
+
+    /* Subnivel 1. Se aplica a un <li> */
+    .menu--nav-subNivel1 {
+        border: none;
+        width: 33%;
+        float: left;
+    }
+
+        .menu--nav-subNivel1 > ul {
+            display: block;
+        }
+
+        .menu--nav-subNivel1:last-child {
+            border-bottom: none;
+        }
+
+    .menu--nav-flecha {
+        position: absolute;
+        z-index: 1;
+        top: 70px; /* A 70px del inicio de la página */
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: none;
+        border-bottom: 10px solid #412854;
+    }
+
+    .menu--nav-nivel1 > .menu--nav-flecha {
+        display: none;
+    }
+
+    .menu--nav-nivel1:hover > .menu--nav-flecha {
+        display: block;
+    }
+
+    /* Para que el menu no se recoloque al desplegar algún submenú */
+    .recolocar {
+        clear: both;
+    }
+}
+
+@media all and (min-width:1110px) {
+
+    .margenAgendaReuniones {
+        margin-top: -40px;
+    }
+}
+
+@media all and (max-width:349px) {
+
+    /* Para que se vea bien el menú hamburguesa en dispositivos de menos de 350px como iPhone 3 */
+    .menu--nav-top {
+        margin-top: 80px;
+    }
+}

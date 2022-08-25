@@ -1,0 +1,469 @@
+﻿@font-face {
+    
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    /*src: url(../../Resources/ErasBoldITC.ttf);*/
+}
+
+.homeSIO1 {
+    display: table;
+    width: 100%;
+}
+
+.homeSIO2 {
+    display: inline ;
+    width: 100%;
+}
+
+.imgSeccion2SIO {
+    text-align:center;
+}
+
+    .imgSeccion2SIO img {
+        width: 75px;
+    }
+
+.titSeccion2SIO {
+    text-align: left;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: bold;
+    color: #003376;
+    margin: 10px;
+    text-align: center;
+}
+
+.subtitSeccion2SIO {
+    text-align: left;
+    font-family: Segoe UI;
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+    margin: 10px;
+    text-align: center;
+}
+
+.tit1 {
+    font-family: 'Segoe UI semibold';
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 5px;
+    color: #23395B;
+    padding-bottom: 40px;
+}
+
+.tit2 {
+    font-family: 'Segoe UI Light';
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 5px;
+    color: #23395B;
+}
+
+.tit23 {
+    font-family: 'Segoe UI Light';
+    font-weight: bold;
+    font-size: 23px;
+    padding-bottom: 5px;
+    color: #23395B;
+}
+
+.tit3 {
+    font-family: Segoe UI;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    color: #23395B;
+}
+
+.seccionHOME {
+    position: relative; /* Para que se mantenga dentro de la capa padre */
+    display: table;
+    width: 100%;
+    height: 96%;
+    padding: 1% 6% 1% 6%;
+}
+
+.seccion {
+    position: relative; /* Para que se mantenga dentro de la capa padre */
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 1% 6% 2% 6%;
+    background-color: #f2f2f2;
+}
+
+.seccion30 {
+    position: relative; /* Para que se mantenga dentro de la capa padre */
+    display: table;
+    width: 100%;
+    height: 30%;
+    padding: 1% 6% 2% 6%;
+    text-align: center;
+}
+
+.seccion5 {
+    position: relative; /* Para que se mantenga dentro de la capa padre */
+    display: table;
+    width: 100%;
+    height: 5%;
+    padding: 1% 6% 2% 6%;
+}
+
+.verdoso {
+    background-image: url("../../images/background_wallpaper.jpg");
+    height: 90%;
+    padding-left: 12%;
+}
+
+.blanco {
+    background-color: white;
+}
+
+.tituloSeccion {
+    color: white;
+    font-size: 14px;
+    background-color: #23395B;
+    padding: 5px 20px 5px 20px;
+    display: inline-block;
+    margin-top: 2% 2% 0 2%;
+}
+
+.divTituloSeccion {
+    display: block;
+    margin: 2% 0 0.5% 0;
+    width: 100%;
+    float: left;
+}
+
+.divPagIntermedia {
+    margin: 2% 0 2% 0;
+    width: 67%;
+    float: left;
+}
+
+.divContenidoEnlacesPagIntermedia {
+    width: 100%;
+    margin-left: 15%;
+    background-color: #13294B;
+}
+
+    .divContenidoEnlacesPagIntermedia a.bloqueado {
+        text-decoration: none;
+        color: lightgray;
+    }
+
+.lbl_pagIntermedia {
+    font-size: 0.9em;
+    font-family: Segoe UI;
+    line-height: 1.38672;
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+}
+.lbl_pagIntermedia.bloqueado {
+        display: none;
+    }
+
+.divTexto_pagIntermedia {
+    font-size: 16px;
+    padding-top: 0.75%;
+    padding-bottom: 0.5%;
+    padding-left: 2%;
+    width: 82%;
+    float: left;
+}
+
+.logo_pagIntermedia {
+    padding-top: 0.6%;
+    height: 30px;
+}
+
+.tituloInfoRelacionada {
+    text-transform: capitalize;
+    color: white;
+    font-size: 0.9em;
+    background-color: #172b6b;
+    padding: 5px 5px 5px 5px;
+    display: inline-block;
+    margin-top: 2% 2% 0 2%;
+}
+
+.divTituloInfoRelacionada {
+    display: none;
+}
+
+.InfoRelacionadaSupDer {
+    display: none;
+}
+
+#idi1, #idi2, #idi3 {
+    float: right;
+}
+
+.encabezadoSite {
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    padding: 0 6% 0 6%;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+}
+
+.lnkCabecera {
+    color: white;
+}
+
+.divIdioma {
+    padding-right: 5px;
+    padding-bottom: 1px;
+    padding-top: 12px;
+}
+
+.logo {
+    height: 45px;
+    position: static;
+    z-index: -1;
+    margin: 19px 0 14px 0;
+    left: 55px;
+}
+
+.divLogoUsuarios {
+    float: left;
+    padding: 7px 2px 2px 7px;
+    font-size: 0.814em;
+    line-height: 40px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+    .divLogoUsuarios > #imgConf {
+        width: 20px;
+    }
+
+.separador {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.divGestionUsuarios {
+    float: left;
+    font-size: 13px;
+    line-height: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.miga {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 100%;
+    color: #23395B;
+}
+
+    .miga ul li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+        .miga ul li a {
+            color: #23395B;
+            text-decoration: none;
+        }
+
+            .miga ul li a:hover {
+                color: #23395B;
+                text-decoration: none;
+            }
+
+.imgMigaRoot {
+    width: 15px;
+}
+
+.encGrande {
+    display: none;
+}
+
+.encPequeño {
+    display: block;
+}
+
+.iconoEncabezado {
+    float: right;
+    margin-top: 10px;
+    display: block;
+}   
+
+    .iconoEncabezado > .tlfMail {
+        height: 20px;
+        margin-left:10px;
+    }
+
+    .iconoEncabezado > .numtlfMailBlack {
+        line-height: 20px;
+        color: #23395B;
+        font-family: Segoe UI;
+        font-size:12px;
+        margin-left:10px;
+    }
+
+        .iconoEncabezado > .numtlfMailBlack a {
+            line-height: 20px;
+            color: #23395B;
+            font-family: Segoe UI;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+            .iconoEncabezado > .numtlfMailBlack a:visited {
+                line-height: 20px;
+                color: #23395B;
+                font-family: Segoe UI;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+
+    .iconoEncabezado > .numtlfMailWhite {
+        line-height: 20px;
+        color: white;
+        font-family: Segoe UI;
+        font-size:12px;
+        margin-left:10px;
+    }
+
+    .iconoEncabezado > .numtlfMailWhite a {
+        line-height: 20px;
+        color: white;
+        font-family: Segoe UI;
+        font-size:12px;
+        margin-left:10px;
+    }
+
+    .iconoEncabezado > .numtlfMailWhite a:visited {
+        line-height: 20px;
+        color: white;
+        font-family: Segoe UI;
+        font-size:12px;
+        margin-left:10px;
+    }
+
+    .iconoEncabezado > .separador {
+        margin:3px 0 7px 0;
+        margin-left:10px;
+    }
+
+@media all and (min-width:780px) {
+
+    /* Para mostrar la Información Relacionada en los PCs */
+    .divTituloInfoRelacionada {
+        display: block;
+        width: 21%;
+        float: right;
+        margin: 0 0 0.5% 2%;
+    }
+
+    .divTituloSeccion {
+        display: block;
+        margin: 2% 0 0.5% 0;
+        width: 77%;
+        float: left;
+    }
+
+    .InfoRelacionadaSupDer {
+        display: block;
+        width: 21%;
+        margin: 0 0 2% 2%;
+        padding: 2%;
+        background-color: white;
+        float: right;
+    }
+}
+
+@media all and (min-width:710px) {
+
+    /*.encabezadoSite {
+        height: 40px;
+    }*/
+
+    .logo {
+        float: left;
+        position: static;
+    }
+}
+
+
+
+@media all and (min-width:610px) and (max-width:709px) {
+
+    /*.encabezadoSite {
+        height: 40px;
+    }*/
+}
+
+@media all and (min-width:349px) and (max-width:449px) {
+
+    .lnkCabecera, #LoginView1_LoginName {
+        font-size: 11px;
+    }
+}
+
+@media all and (max-width:349px) {
+    
+    /* Para que en dispositivos moviles esté más compacto*/
+    .grid_1 { 
+        margin: 0;
+    }
+
+    /* Para que se vea bien el menú hamburguesa en dispositivos de menos de 350px como iPhone 3 */
+    .logo {
+        clear: both;
+    }
+}
+
+@media all and (min-width: 310px) {
+    
+    .encGrande {
+        display: block;
+        padding-top: 15px;
+    }
+
+    .encPequeño {
+        display: none;
+    }
+
+    .iconoEncabezado > .numtlfMail a {
+        line-height: 20px;
+        color: black;
+        font-family: Segoe UI;
+        font-size:12px;
+        margin: 0;
+    }
+}
+
+.divEntorno {
+    float: left;
+    color: white;
+    padding: 0px 5px 2px 25px;
+    font-size: 13px;
+    line-height: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.divTit {
+    font-family: 'Segoe UI semibold';
+    float: left;
+    color: white;
+    padding: 0px 21px 2px 0px;
+    font-size: 13px;
+    line-height: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
