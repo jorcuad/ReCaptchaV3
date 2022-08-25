@@ -35,7 +35,8 @@
                 }
             }
 
-            function onLogin() {
+            function onLogin(e) {
+                e.preventDefault();
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
                         action: 'submit'
@@ -115,7 +116,7 @@
                                                     data-sitekey="6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"
                                                     data-callback='onSubmit' data-action='submit'
                                                     id="LoginView1_Login1_LoginButton" class="btnSIOlogin azulSIO"
-                                                    onclick="onLogin()" />
+                                                    onclick="onLogin(event)" />
                                             </td>
                                         </tr>
                                         <tr>
