@@ -65,7 +65,6 @@
                         demo.append(tokenExplanationString);
                         demo.append(serverString);
                         button.addEventListener("click", function(event, token){
-                            event.preventDefault();
                             $.post('https://www.google.com/recaptcha/api/siteverify', {
                                 secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
                                 response: token
