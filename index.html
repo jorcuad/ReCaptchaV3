@@ -68,11 +68,11 @@
                 var tokenString = document.createElement('p')
                 tokenString.classList.add('lighter');
                 var tokenExplanationString = document.createElement('p')
-                tokenExplanationString.textContent = "Este token identifica el intento de login que acabamos de realizar. Con este token podemos obtener la información sobre el intento de login.";
+                tokenExplanationString.textContent = "Este token identifica el intento de login que acabamos de realizar, con él podemos verificar si el intento ha sido realizado por un humano o no.";
                 tokenExplanationString.classList.add('light');
                 var serverString = document.createElement('p')
-                serverString.textContent = "Este token lo enviaríamos a nuestro servidor. Una vez allí verificaremos el token. Pulsa el botón para enviarlo a verificar:";
-                serverString.classList.add('light');
+                serverString.textContent = "> Este token debe enviarse a nuestro servidor. En el formulario del servidor, pulsa el botón de verificar token para comprobar el resultado de la verificación.";
+                serverString.classList.add('lighter');
 
                 demo.append(loginString);
                 grecaptcha.ready(function () {
