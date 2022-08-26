@@ -40,6 +40,7 @@
 
             function onVerify(e) {
                 e.preventDefault();
+                var demo = document.getElementById('demo-window');
                 var verifyString = document.createElement('p')
                 verifyString.classList.add('lighter');
                 $.post('https://www.google.com/recaptcha/api/siteverify', {
