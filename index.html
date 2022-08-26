@@ -21,6 +21,8 @@
     <form method="post" action="index.html" id="form1" class="contenedor">
 
         <script type="text/javascript">
+            var token = "";
+
             function Focus() {
                 obj = document.getElementById("LoginView1_ucIniciarSesion_Login1_Password");
                 obj.value = "";
@@ -35,6 +37,24 @@
                     obj.className = "txtLoginHome";
                 }
             }
+
+            function onVerify(e) {
+                e.preventDefault();
+                $.post('https://www.google.com/recaptcha/api/siteverify', {
+                    secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
+                    response: token
+                },
+                function (returnedData) {
+                    verifyString.textContent = "> Token verificado, el score es: " + returnedData.score + " (Puedes ver el resto de la respuesta como un console.log en el navegador.)";
+                    demo.append(verifyString);
+                    console.log(returnedData);
+                    return false;
+                }).fail(function () {
+                    console.log("Error verifying token.");
+                    return false;
+                });
+                return false;
+            };
 
             function onLogin(e) {
                 e.preventDefault();
@@ -59,28 +79,12 @@
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
                         action: 'submit'
-                    }).then(function (token) {
-                        tokenString.textContent = "> Token recibido: " + token
+                    }).then(function (tkn) {
+                        token = tkn;
+                        tokenString.textContent = "> Token recibido: " + token;
                         demo.append(tokenString);
                         demo.append(tokenExplanationString);
                         demo.append(serverString);
-                        button.addEventListener("click", function(event, token){
-                            $.post('https://www.google.com/recaptcha/api/siteverify', {
-                                secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
-                                response: token
-                            },
-                            function (returnedData) {
-                                verifyString.textContent = "> Token verificado, el score es: " + returnedData.score + " (Puedes ver el resto de la respuesta como un console.log en el navegador.)";
-                                demo.append(verifyString);
-                                console.log(returnedData);
-                                return false;
-                            }).fail(function () {
-                                console.log("Error verifying token.");
-                                return false;
-                            });
-                            return false;
-                        };
-                        demo.append(button);
                     });
                 });
             }
@@ -178,6 +182,11 @@
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div id="divLogIn2" class="contenedorLoginSIO">
+                        <div class="tit1login" style="padding-left:10px">Servidor: 
+                            <input id="verifyButton" type="button" value="Verificar Token" onclick="onVerify(event)" />
+                        </div>   
                     </div>
                 </div>
             </div>
