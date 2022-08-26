@@ -40,6 +40,8 @@
 
             function onVerify(e) {
                 e.preventDefault();
+                var verifyString = document.createElement('p')
+                verifyString.classList.add('lighter');
                 $.post('https://www.google.com/recaptcha/api/siteverify', {
                     secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
                     response: token
@@ -70,10 +72,6 @@
                 var serverString = document.createElement('p')
                 serverString.textContent = "Este token lo enviaríamos a nuestro servidor. Una vez allí verificaremos el token. Pulsa el botón para enviarlo a verificar:";
                 serverString.classList.add('light');
-                var verifyString = document.createElement('p')
-                verifyString.classList.add('lighter');
-                var button = document.createElement('button');
-                button.innerHTML = 'Verificar Token';
 
                 demo.append(loginString);
                 grecaptcha.ready(function () {
