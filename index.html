@@ -2,6 +2,7 @@
 <html>
 
 <head id="Head1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"></script>
     <link href="themes/css/comun.css" type="text/css" rel="stylesheet" />
     <link href="themes/css/menu.css" type="text/css" rel="stylesheet" />
@@ -13,7 +14,6 @@
     <title>
         Demo ReChapta | Croke
     </title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,26 +36,47 @@
             }
 
             function onLogin(e) {
+                var demo = document.getElementById('demo-window');
+                var loginString = document.createElement('p')
+                loginString.textContent = "> Login... llamando grecaptcha.execute()"
+                loginString.classList.add('lighter');
+                var tokenString = document.createElement('p')
+                tokenString.textContent = "> Token recibido: " + token
+                tokenString.classList.add('lighter');
+                var tokenExplanationString = document.createElement('p')
+                tokenExplanationString.textContent = "Este token identifica el intento de login que acabamos de realizar. Con este token podemos obtener la información sobre el intento de login.";
+                tokenExplanationString.classList.add('light');
+                var serverString = document.createElement('p')
+                serverString.textContent = "Este token lo enviaríamos a nuestro servidor. Una vez allí verificaremos el token. Pulsa el botón para enviarlo a verificar:";
+                serverString.classList.add('light');
+                var verifyString = document.createElement('p')
+                verifyString.classList.add('lighter');
+                var button = document.createElement('button');
+                button.innerHTML = 'Verificar Token';
+
+                demo.append(loginString);
                 e.preventDefault();
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
                         action: 'submit'
                     }).then(function (token) {
-                        console.log("TOKEN");
-                        console.log(token);
-                        console.log("VERIFICANDO TOKEN");
-                        $.post('https://www.google.com/recaptcha/api/siteverify', {
+                        demo.append(tokenString);
+                        demo.append(tokenExplanationString);
+                        demo.append(serverString);
+                        button.onclick = function(token){
+                            $.post('https://www.google.com/recaptcha/api/siteverify', {
                                 secret: "6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG", //Clave secreta, no debe ir en el front, esto es un proceso de back.
                                 response: token
                             },
                             function (returnedData) {
+                                verifyString.textContent = "> Token verificado, el score es: " + returnedData.score + " (Puedes ver el resto de la respuesta como un console.log en el navegador.)";
+                                demo.append(verifyString);
                                 console.log(returnedData);
                             }).fail(function () {
-                            console.log("error");
-                        });
-                        //Hay que hacer un post con el token y la clave privada a URL: https://www.google.com/recaptcha/api/siteverify METHOD: POST
-                        // https://developers.google.com/recaptcha/docs/verify
-                        // Esto devuelve los datos que hay sobre la petición
+                                console.log("error");
+                            });
+                        };
+                        demo.append(button);
                     });
                 });
             }
@@ -84,12 +105,38 @@
             <div class="homeSIO1">
                 <div class="loginSIO_seccion1" style="margin-left:15%;">
                     <div class="tit1" style="font-family:'Segoe UI'">
-                        <span>Demo de</span><br />
+                        <span>Demo de</span>
                         <span>ReChaptaV3</span>
                     </div>
-                    <p class="tit23" style="font-family:Segoe UI semibold">Comprobación del funcionamiento y despliegue
-                        <br />
-                        de Google ReChaptaV3 en una web estática.</p>
+                    <div class="tit1" id="demo-window" style="font-family:'Segoe UI'">
+                        <p>Google ReCaptcha V3 sirve para verificar que los intentos de login los realiza un humano y no una máquina.</p>
+                        <p>Evita ataques de fuerza bruta, enumeración, etc. Es una buena práctica usar este tipo de medidas en los formularios que estén publicados en internet.</p>
+                        <p>La versión 3 de Google ReCaptcha es invisible, por lo que el usuario no verá la típica ventana de "¿Qué imágenes son camiones?".</p>
+                        <p>Funcionamiento:</p>
+                        <p class="light">1) Para integrarlo en un formulario, hay que crear un captcha en el portal de administración de una cuenta Google: https://www.google.com/recaptcha/admin/create</p>
+                        <p class="lighter">> Tendremos que asignarle uno o varios dominios y nos devolverá un par de claves público-privada.</p>
+                        <p class="lighter">> En esta demo, la clave pública es: 6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q</p>
+                        <p class="lighter">> En esta demo, la clave privada es: 6LcHpI0hAAAAABiT-YN_okh2R1X_TtwaT4jDKckG</p>
+                        <p class="light">2) Cargamos el script de Google ReCaptcha en la aplicación web usando la clave pública como parámetro:</p>
+                        <p class="lighter">> script src="https://www.google.com/recaptcha/api.js?render=6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"</p>
+                        <p class="light">3) Añadimos en la etiqueta HTML, del botón del formulario, los attributos de Captcha.</p>
+                        <p class="lighter">Hay varios tipos de atributos con comportamientos diferentes, en este ejemplo se toma control completo del proceso, hay atributos que automatizan más el proceso, dándole el control a Google.</p>
+                        <p class="lighter">> class="g-recaptcha-response" data-sitekey="6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q"</p>
+                        <p class="light">4) En el evento onClick del botón recibimos un token.</p>
+                        <p class="lighter">> Primero llamamos a grecaptcha.ready()</p>
+                        <p class="lighter">> En su función de callback llamamos a grecaptcha.execute() con nuestra clave pública y la acción submit como parámetros.</p>
+                        <p class="lighter">> En el callback de grecaptcha.execute(), Google, nos devolverá un Token.</p>
+                        <p class="lighter">Hay diferentes parámetros de grecaptcha.execute(), pueden consultarse en: https://developers.google.com/recaptcha/docs/v3</p>
+                        <p class="light">5) Este token hay que mandarlo al servidor de la aplicación web a un endpoint que hayamos creado para ello o con la propia petición de login.</p>
+                        <p>A partir de aquí todo sucede en el servidor, NUNCA EN EL FRONTAL, en esta demo se hace en el frontal por simplificar la explicación.</p>
+                        <p class="light">6) El servidor recive el token y lo verifica.</p>
+                        <p class="lighter">> Para ello se hace un POST a https://www.google.com/recaptcha/api/siteverify</p>
+                        <p class="lighter">> En los parámetros va nuestra clave privada, el token que hemos recibido y opcionalmente la IP origen del servidor.</p>
+                        <p class="lighter">> La documentación: https://developers.google.com/recaptcha/docs/verify</p>
+                        <p class="lighter">> Entre otros parámetros, el que nos importa es el de "score" dónde se analiza que probabilidad de que sea un bot hay y nos permitirá decidir como actuar.</p>
+                        <p class="lighter">> Si el "score" es 1.0 es que es muy probable que sea un humano, si es 0.0 es muy probable que sea una máquina.</p>
+                        <p>Vamos a probarlo, introduce unos datos de login ficticios...</p>
+                    </div>
                 </div>
                 <div class="loginSIO_seccion2">
                     <div id="divLogIn" class="contenedorLoginSIO">
@@ -120,7 +167,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td colspan="2"><a id="LoginView1_Login1_PasswordRecoveryLink">No ha olvidad
+                                            <td colspan="2"><a id="LoginView1_Login1_PasswordRecoveryLink">No ha olvidado
                                                     su contraseña.</a></td>
                                         </tr>
                                     </table>

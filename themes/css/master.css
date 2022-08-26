@@ -42,6 +42,31 @@
     text-align: center;
 }
 
+#demo-window {
+    background-color: white;
+    border: 2px solid #13294B;
+    border-radius: 10px;
+    height: 450px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+#demo-window p {
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+    font-family: 'Segoe UI semibold';
+    font-weight: bold;
+    font-size: medium;
+}
+
+#demo-window .light {
+    font-size: 0.8rem;
+}
+
+#demo-window .lighter {
+    font-size: 0.7rem;
+}
+
 .tit1 {
     font-family: 'Segoe UI semibold';
     font-weight: bold;
