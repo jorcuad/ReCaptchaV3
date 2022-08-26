@@ -36,6 +36,7 @@
             }
 
             function onLogin(e) {
+                e.preventDefault();
                 var demo = document.getElementById('demo-window');
                 var loginString = document.createElement('p')
                 loginString.textContent = "> Login... llamando grecaptcha.execute()"
@@ -55,7 +56,6 @@
                 button.innerHTML = 'Verificar Token';
 
                 demo.append(loginString);
-                e.preventDefault();
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
                         action: 'submit'
