@@ -42,7 +42,6 @@
                 loginString.textContent = "> Login... llamando grecaptcha.execute()"
                 loginString.classList.add('lighter');
                 var tokenString = document.createElement('p')
-                tokenString.textContent = "> Token recibido: " + token
                 tokenString.classList.add('lighter');
                 var tokenExplanationString = document.createElement('p')
                 tokenExplanationString.textContent = "Este token identifica el intento de login que acabamos de realizar. Con este token podemos obtener la información sobre el intento de login.";
@@ -60,6 +59,7 @@
                     grecaptcha.execute('6LcHpI0hAAAAAN_qwctTaGCMBaBZaUFGdsz1fq-q', {
                         action: 'submit'
                     }).then(function (token) {
+                        tokenString.textContent = "> Token recibido: " + token
                         demo.append(tokenString);
                         demo.append(tokenExplanationString);
                         demo.append(serverString);
