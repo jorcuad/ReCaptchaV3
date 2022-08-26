@@ -9,6 +9,7 @@
     <link href="themes/css/login.css" type="text/css" rel="stylesheet" />
     <link href="themes/css/master.css" type="text/css" rel="stylesheet" />
     <link href="themes/css/pie.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>
@@ -72,8 +73,10 @@
                                 verifyString.textContent = "> Token verificado, el score es: " + returnedData.score + " (Puedes ver el resto de la respuesta como un console.log en el navegador.)";
                                 demo.append(verifyString);
                                 console.log(returnedData);
+                                return false;
                             }).fail(function () {
-                                console.log("error");
+                                console.log("Error verifying token.");
+                                return false;
                             });
                             return false;
                         };
